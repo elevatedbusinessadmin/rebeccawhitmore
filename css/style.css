@@ -485,7 +485,7 @@ h1 {
 }
 
 .topics-band {
-  padding: clamp(4rem, 7vw, 7rem) 1.5rem;
+  padding: clamp(3rem, 5.5vw, 5.4rem) 1.5rem;
   border-bottom: 1px solid var(--ink);
   background: var(--highlight);
 }
@@ -513,7 +513,7 @@ h1 {
 
 .topic-marquee {
   width: 100vw;
-  margin: 3.4rem calc(50% - 50vw) 0;
+  margin: clamp(2.1rem, 4vw, 3rem) calc(50% - 50vw) 0;
   border-top: 1px solid rgba(31, 36, 35, .18);
   border-bottom: 1px solid rgba(31, 36, 35, .18);
 }
