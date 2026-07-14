@@ -3,12 +3,10 @@
   --ink-deep: #171b1a;
   --paper: #f7f5ef;
   --paper-soft: #ebe8df;
-  --champagne: #8d7286;
-  --champagne-light: #b9a6b4;
-  --highlight: #eeeafe;
-  --highlight-soft: #d8d1f5;
-  --cta: #6447d7;
-  --cta-hover: #5238bf;
+  --champagne: #b89760;
+  --champagne-light: #dfcda7;
+  --highlight: #ddfb83;
+  --highlight-soft: #efffbd;
   --line: rgba(31, 36, 35, .18);
   --white: #fff;
   --serif: "Italiana", "Times New Roman", serif;
@@ -134,14 +132,14 @@ input {
 }
 
 .button-highlight {
-  background: var(--cta);
-  color: var(--white);
-  box-shadow: 0 18px 38px rgba(100, 71, 215, .26);
+  background: var(--highlight);
+  color: var(--ink);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .18);
 }
 
 .button-highlight:hover {
-  background: var(--cta-hover);
-  box-shadow: 0 22px 44px rgba(100, 71, 215, .34);
+  background: var(--highlight-soft);
+  box-shadow: 0 22px 44px rgba(31, 36, 35, .18);
 }
 
 .button-outline {
@@ -150,12 +148,12 @@ input {
 }
 
 .button-dark {
-  background: var(--cta);
+  background: var(--ink);
   color: var(--white);
 }
 
 .button-dark:hover {
-  background: var(--cta-hover);
+  background: #303735;
 }
 
 .hero {
@@ -627,7 +625,7 @@ h1 {
 
 .about-button {
   margin-top: 1.7rem;
-  color: var(--white);
+  color: var(--ink);
 }
 
 .subscribe-section {
@@ -636,8 +634,7 @@ h1 {
   grid-template-columns: minmax(0, .95fr) minmax(320px, .7fr);
   gap: clamp(3rem, 7vw, 7rem);
   background:
-    radial-gradient(circle at 78% 22%, rgba(238, 234, 254, .86), transparent 31%),
-    radial-gradient(circle at 18% 80%, rgba(216, 209, 245, .34), transparent 34%),
+    radial-gradient(circle at 80% 20%, rgba(221, 251, 131, .36), transparent 28%),
     var(--paper);
   align-items: end;
 }
@@ -712,7 +709,7 @@ input {
 }
 
 .signup-form .button:hover {
-  box-shadow: 0 18px 36px rgba(100, 71, 215, .28);
+  box-shadow: 0 18px 36px rgba(31, 36, 35, .22);
 }
 
 .signup-form .button:disabled {
