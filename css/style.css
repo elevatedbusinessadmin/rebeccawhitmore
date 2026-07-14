@@ -174,21 +174,21 @@ input {
   position: absolute;
   inset: 0;
   display: grid;
-  opacity: .32;
+  opacity: .34;
   place-items: center;
   pointer-events: none;
   z-index: 0;
 }
 
 .hero-image-placeholder::before {
-  width: min(520px, 70vw);
-  aspect-ratio: 4 / 5;
+  width: min(980px, 76vw);
+  aspect-ratio: 16 / 9;
   border: 1px solid rgba(255, 255, 255, .25);
   background:
-    linear-gradient(rgba(23, 27, 26, .22), rgba(23, 27, 26, .44)),
-    url("../images/rebeccaportrait.jpg") center 34% / cover no-repeat;
+    linear-gradient(rgba(23, 27, 26, .2), rgba(23, 27, 26, .5)),
+    url("../images/imagewide.jpg") center center / cover no-repeat;
   content: "";
-  filter: grayscale(.15) saturate(.8);
+  filter: grayscale(.1) saturate(.78);
 }
 
 .hero-image-placeholder span,
