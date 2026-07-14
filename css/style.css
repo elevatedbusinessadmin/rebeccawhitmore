@@ -221,6 +221,21 @@ input {
   text-transform: uppercase;
 }
 
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  flex-wrap: wrap;
+}
+
+.eyebrow i {
+  width: 7px;
+  height: 7px;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+}
+
 h1,
 h2 {
   margin: 0;
