@@ -279,10 +279,27 @@ h1 {
 
 .hero-rule,
 .about-rule {
+  position: relative;
   width: 1px;
   height: 46px;
   margin: 2rem 0;
   background: rgba(255, 255, 255, .45);
+}
+
+.hero-rule {
+  animation: arrowPulse 2.4s ease-in-out infinite;
+}
+
+.hero-rule::after {
+  position: absolute;
+  right: -4px;
+  bottom: 0;
+  width: 9px;
+  height: 9px;
+  border-right: 1px solid rgba(255, 255, 255, .58);
+  border-bottom: 1px solid rgba(255, 255, 255, .58);
+  content: "";
+  transform: rotate(45deg);
 }
 
 .hero-copy {
@@ -567,6 +584,25 @@ input {
 .site-footer a {
   color: var(--highlight);
   text-decoration: none;
+}
+
+@keyframes arrowPulse {
+  0%,
+  100% {
+    opacity: .56;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rule {
+    animation: none;
+  }
 }
 
 @media (max-width: 860px) {
