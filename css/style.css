@@ -156,7 +156,6 @@ input {
   background:
     linear-gradient(rgba(23, 27, 26, .78), rgba(23, 27, 26, .9)),
     radial-gradient(circle at 50% 15%, rgba(221, 251, 131, .22), transparent 34%),
-    url("../images/rebeccaportrait.jpg") center 34% / cover no-repeat,
     var(--ink-deep);
   color: var(--white);
   place-items: center;
@@ -172,15 +171,24 @@ input {
 }
 
 .hero-image-placeholder {
-  display: none;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  opacity: .32;
+  place-items: center;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-image-placeholder::before {
   width: min(520px, 70vw);
   aspect-ratio: 4 / 5;
   border: 1px solid rgba(255, 255, 255, .25);
-  background: linear-gradient(135deg, rgba(255, 255, 255, .12), rgba(221, 251, 131, .18));
+  background:
+    linear-gradient(rgba(23, 27, 26, .22), rgba(23, 27, 26, .44)),
+    url("../images/rebeccaportrait.jpg") center 34% / cover no-repeat;
   content: "";
+  filter: grayscale(.15) saturate(.8);
 }
 
 .hero-image-placeholder span,
