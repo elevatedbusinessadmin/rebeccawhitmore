@@ -320,33 +320,6 @@ h1 {
   text-decoration: none;
 }
 
-.hero-portrait-layout {
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 30vw);
-  gap: clamp(2rem, 5vw, 5rem);
-  padding-inline: clamp(2rem, 5vw, 5rem);
-  place-items: center;
-  text-align: center;
-}
-
-.hero-portrait-layout .hero-inner {
-  width: 100%;
-  max-width: 980px;
-  justify-self: center;
-}
-
-.hero-portrait-layout .hero-portrait-card {
-  width: min(30vw, 430px);
-  min-width: 280px;
-  aspect-ratio: 3 / 4;
-  border: 1px solid rgba(255, 255, 255, .24);
-  background:
-    linear-gradient(rgba(23, 27, 26, .08), rgba(23, 27, 26, .34)),
-    url("../images/rebeccaportrait.jpg") center 34% / cover no-repeat;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, .2);
-  filter: grayscale(.08) saturate(.9);
-  justify-self: end;
-}
-
 .split-section,
 .about-section {
   display: grid;
@@ -426,6 +399,27 @@ h1 {
     linear-gradient(135deg, rgba(255, 255, 255, .5), rgba(221, 251, 131, .24)),
     #d8d6cc;
   content: "";
+}
+
+.portrait-placeholder {
+  background:
+    radial-gradient(circle at 35% 24%, rgba(221, 251, 131, .18), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, .52), rgba(184, 151, 96, .12)),
+    var(--paper-soft);
+}
+
+.portrait-placeholder span {
+  display: none;
+}
+
+.portrait-placeholder::before {
+  width: min(430px, 68%);
+  border: 1px solid rgba(255, 255, 255, .62);
+  border-radius: 18px;
+  background:
+    linear-gradient(rgba(255, 255, 255, .04), rgba(31, 36, 35, .08)),
+    url("../images/rebeccaportrait.jpg") center 34% / cover no-repeat;
+  box-shadow: 0 30px 70px rgba(31, 36, 35, .16);
 }
 
 .topics-band {
@@ -636,18 +630,6 @@ input {
 @media (max-width: 860px) {
   .site-header {
     min-height: 68px;
-  }
-
-  .hero-portrait-layout {
-    grid-template-columns: 1fr;
-    padding-inline: 1.5rem;
-  }
-
-  .hero-portrait-layout .hero-portrait-card {
-    width: min(340px, 76vw);
-    min-width: 0;
-    justify-self: center;
-    order: -1;
   }
 
   .header-button {
