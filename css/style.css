@@ -3,10 +3,12 @@
   --ink-deep: #171b1a;
   --paper: #f7f5ef;
   --paper-soft: #ebe8df;
-  --champagne: #b89760;
-  --champagne-light: #dfcda7;
+  --champagne: #8d7286;
+  --champagne-light: #b9a6b4;
   --highlight: #eeeafe;
   --highlight-soft: #d8d1f5;
+  --cta: #6447d7;
+  --cta-hover: #5238bf;
   --line: rgba(31, 36, 35, .18);
   --white: #fff;
   --serif: "Italiana", "Times New Roman", serif;
@@ -132,9 +134,14 @@ input {
 }
 
 .button-highlight {
-  background: var(--highlight);
-  color: var(--ink);
-  box-shadow: 0 18px 38px rgba(0, 0, 0, .18);
+  background: var(--cta);
+  color: var(--white);
+  box-shadow: 0 18px 38px rgba(100, 71, 215, .26);
+}
+
+.button-highlight:hover {
+  background: var(--cta-hover);
+  box-shadow: 0 22px 44px rgba(100, 71, 215, .34);
 }
 
 .button-outline {
@@ -143,8 +150,12 @@ input {
 }
 
 .button-dark {
-  background: var(--ink);
+  background: var(--cta);
   color: var(--white);
+}
+
+.button-dark:hover {
+  background: var(--cta-hover);
 }
 
 .hero {
@@ -352,7 +363,7 @@ h1 {
 .split-copy h2 em {
   position: relative;
   display: inline-block;
-  color: #8d7250;
+  color: var(--champagne);
   font-style: normal;
 }
 
@@ -370,7 +381,7 @@ h1 {
 
 .split-copy .section-kicker,
 .subscribe-copy .section-kicker {
-  color: #8d7250;
+  color: var(--champagne);
 }
 
 .split-copy .section-kicker {
@@ -616,7 +627,7 @@ h1 {
 
 .about-button {
   margin-top: 1.7rem;
-  color: var(--ink);
+  color: var(--white);
 }
 
 .subscribe-section {
@@ -625,7 +636,8 @@ h1 {
   grid-template-columns: minmax(0, .95fr) minmax(320px, .7fr);
   gap: clamp(3rem, 7vw, 7rem);
   background:
-    radial-gradient(circle at 80% 20%, rgba(221, 251, 131, .36), transparent 28%),
+    radial-gradient(circle at 78% 22%, rgba(238, 234, 254, .86), transparent 31%),
+    radial-gradient(circle at 18% 80%, rgba(216, 209, 245, .34), transparent 34%),
     var(--paper);
   align-items: end;
 }
@@ -697,6 +709,10 @@ input {
   border-radius: 0;
   cursor: pointer;
   box-shadow: 0 14px 30px rgba(31, 36, 35, .18);
+}
+
+.signup-form .button:hover {
+  box-shadow: 0 18px 36px rgba(100, 71, 215, .28);
 }
 
 .signup-form .button:disabled {
