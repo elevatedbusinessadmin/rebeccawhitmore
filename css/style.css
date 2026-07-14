@@ -246,9 +246,26 @@ h2 {
 }
 
 h1 {
+  position: relative;
   margin-top: 1.2rem;
   font-size: clamp(4rem, 9vw, 8.4rem);
   line-height: .85;
+}
+
+.newsletter-title {
+  display: inline-block;
+}
+
+.newsletter-title span {
+  display: block;
+  margin-top: -.08em;
+  padding-right: .1em;
+  color: var(--champagne-light);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 2.1vw, 2rem);
+  font-style: italic;
+  line-height: 1;
+  text-align: right;
 }
 
 .script-line {
@@ -615,6 +632,12 @@ input {
     line-height: .9;
     overflow-wrap: anywhere;
     word-break: break-word;
+  }
+
+  .newsletter-title span {
+    margin-top: .1rem;
+    font-size: 1.05rem;
+    text-align: center;
   }
 
   .script-line {
