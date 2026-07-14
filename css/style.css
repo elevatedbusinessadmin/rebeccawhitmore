@@ -154,8 +154,9 @@ input {
   overflow: hidden;
   padding: clamp(6rem, 12vw, 11rem) 1.5rem clamp(4rem, 8vw, 7rem);
   background:
-    linear-gradient(rgba(23, 27, 26, .78), rgba(23, 27, 26, .9)),
+    linear-gradient(rgba(23, 27, 26, .72), rgba(23, 27, 26, .9)),
     radial-gradient(circle at 50% 15%, rgba(221, 251, 131, .22), transparent 34%),
+    url("../images/imagewide.jpg") center center / cover no-repeat,
     var(--ink-deep);
   color: var(--white);
   place-items: center;
@@ -171,13 +172,7 @@ input {
 }
 
 .hero-image-placeholder {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  opacity: .34;
-  place-items: center;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .hero-image-placeholder::before {
