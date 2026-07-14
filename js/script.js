@@ -47,7 +47,7 @@ forms.forEach((form) => {
       }
 
       form.reset();
-      setStatus(form, 'Thank you. Please check your inbox.', 'success');
+      setStatus(form, "Thanks so much for subscribing. I've sent a little welcome introduction to your inbox. Rebecca xo", 'success');
     } catch (error) {
       setStatus(form, error.message || 'The signup could not be completed right now.', 'error');
     } finally {
