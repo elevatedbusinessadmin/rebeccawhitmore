@@ -511,18 +511,56 @@ h1 {
   text-transform: none;
 }
 
-.topic-list {
-  display: grid;
-  margin: 3.4rem 0 0;
-  padding: 0;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .8rem 3rem;
-  list-style: none;
-  text-align: left;
+.topic-marquee {
+  width: 100vw;
+  margin: 3.4rem calc(50% - 50vw) 0;
+  border-top: 1px solid rgba(31, 36, 35, .18);
+  border-bottom: 1px solid rgba(31, 36, 35, .18);
 }
 
-.topic-list li::before {
-  content: "+ ";
+.topic-row {
+  display: flex;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.topic-row + .topic-row {
+  border-top: 1px solid rgba(31, 36, 35, .13);
+}
+
+.topic-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  flex-shrink: 0;
+  animation: topicScrollLeft 42s linear infinite;
+  will-change: transform;
+}
+
+.topic-row-reverse .topic-track {
+  animation-name: topicScrollRight;
+  animation-duration: 48s;
+}
+
+.topic-track span {
+  padding-inline: clamp(1.2rem, 2.4vw, 2.5rem);
+  font-size: clamp(.9rem, 1.4vw, 1.18rem);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topic-track i {
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgba(31, 36, 35, .65);
+  flex: 0 0 auto;
+  transform: rotate(45deg);
+}
+
+.topic-marquee:hover .topic-track {
+  animation-play-state: paused;
 }
 
 .about-section {
@@ -683,8 +721,29 @@ input {
   }
 }
 
+@keyframes topicScrollLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes topicScrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .hero-rule {
+  .hero-rule,
+  .topic-track {
     animation: none;
   }
 }
@@ -719,11 +778,6 @@ input {
 
   .about-image-placeholder {
     order: 2;
-  }
-
-  .topic-list {
-    grid-template-columns: 1fr;
-    text-align: center;
   }
 
   .site-footer {
