@@ -572,8 +572,23 @@ h1 {
   border-right: 1px solid rgba(255, 255, 255, .2);
   border-left: 0;
   background:
-    linear-gradient(180deg, transparent 68%, rgba(221, 251, 131, .4)),
-    #c8c7bd;
+    radial-gradient(circle at 65% 22%, rgba(221, 251, 131, .16), transparent 32%),
+    linear-gradient(135deg, #2b3130, #151918);
+  place-items: center;
+}
+
+.about-image-placeholder span {
+  display: none;
+}
+
+.about-image-placeholder::before {
+  width: min(430px, 68%);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 18px;
+  background:
+    linear-gradient(rgba(23, 27, 26, .04), rgba(23, 27, 26, .22)),
+    url("../images/rebeccaportrait2.jpg") center 35% / cover no-repeat;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .28);
 }
 
 .about-copy h2 {
@@ -597,6 +612,11 @@ h1 {
 
 .about-copy .bold-note {
   color: var(--white);
+}
+
+.about-button {
+  margin-top: 1.7rem;
+  color: var(--ink);
 }
 
 .subscribe-section {
