@@ -741,6 +741,25 @@ input {
   font-size: 1.25rem;
 }
 
+.site-footer .footer-business {
+  display: block;
+  max-width: 420px;
+  color: rgba(255, 255, 255, .78);
+  font-family: var(--sans);
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+.footer-business a {
+  color: var(--highlight);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-business a:hover {
+  text-decoration: underline;
+}
+
 .footer-mark {
   width: 20px;
   height: 20px;
