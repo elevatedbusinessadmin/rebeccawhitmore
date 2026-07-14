@@ -207,7 +207,7 @@ input {
   position: relative;
   z-index: 1;
   display: grid;
-  width: min(760px, 100%);
+  width: min(1120px, calc(100% - 64px));
   justify-items: center;
 }
 
@@ -254,6 +254,7 @@ h1 {
 
 .newsletter-title {
   display: inline-block;
+  white-space: nowrap;
 }
 
 .newsletter-title span {
@@ -272,9 +273,9 @@ h1 {
   margin: 1rem 0 0;
   color: var(--champagne-light);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.5rem, 3.2vw, 3rem);
+  font-size: clamp(1.45rem, 2.45vw, 2.45rem);
   font-style: italic;
-  line-height: 1;
+  line-height: 1.12;
 }
 
 .hero-rule,
@@ -303,11 +304,12 @@ h1 {
 }
 
 .hero-copy {
-  max-width: 560px;
+  max-width: 980px;
   margin: 0 0 2.6rem;
   color: rgba(255, 255, 255, .82);
-  font-size: .96rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.65;
+  text-wrap: balance;
 }
 
 .scroll-cue {
@@ -674,6 +676,14 @@ input {
     margin-top: .1rem;
     font-size: 1.05rem;
     text-align: center;
+  }
+
+  .newsletter-title {
+    white-space: normal;
+  }
+
+  .desktop-break {
+    display: none;
   }
 
   .script-line {
